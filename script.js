@@ -1,26 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Sayfa yüklendi!");
-
-    // Teklif Al butonuna tıklanınca uyarı göster
-    document.querySelector(".btn-danger").addEventListener("click", function () {
-        alert("Teklif almak için bizimle iletişime geçin!");
+  
+    // "Teklif Al" butonuna tıklanınca İletişim bölümüne yumuşak kaydırma
+    document.querySelectorAll(".hero-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+      });
     });
-
-    // Navbar linklerine tıklanınca konsola yazdır
+  
+    // Navbar linklerine tıklanınca ilgili bölüme yumuşak kaydırma
     document.querySelectorAll(".nav-link").forEach(function (link) {
-        link.addEventListener("click", function () {
-            console.log(this.innerText + " linkine tıklandı.");
-        });
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
     });
-
-    // Luxury bölümündeki kartlara hover efekti ekle
-    document.querySelectorAll(".luxury-card").forEach(function (card) {
-        card.addEventListener("mouseover", function () {
-            card.style.transform = "scale(1.1)";
-        });
-
-        card.addEventListener("mouseout", function () {
-            card.style.transform = "scale(1)";
-        });
+  
+    // İletişim formu gönderim işlemi
+    document.querySelector("#contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Mesajınız gönderildi, en kısa sürede dönüş sağlanacaktır.");
+      this.reset();
     });
-});
+  });

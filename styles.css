@@ -1,83 +1,119 @@
-/* GENEL STİLLER */
+/* Genel Stiller */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #f0f8ff, #cceeff); /* Geçişi daha yumuşak yap */
-    color: #333;
     margin: 0;
     padding: 0;
+    color: #333;
     overflow-x: hidden;
-}
-
-/* HERO BÖLÜMÜ - GÖRSEL TAM EKRANI KAPLAR */
-.hero-section {
-    background: url('assets/bb.jpeg') no-repeat center center/cover;
+  }
+  
+  /* Navbar */
+  .custom-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+  }
+  .custom-navbar .navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+  }
+  .custom-navbar .nav-link {
+    color: #333;
+    transition: color 0.3s;
+  }
+  .custom-navbar .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Hero Section */
+  .hero-section {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('assets/bb.jpeg') no-repeat center center/cover;
     position: relative;
-    filter: brightness(0.9) saturate(1.2); /* Renkleri daha net ve canlı yap */
-}
-
-.hero-section .overlay {
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Daha hafif bir örtü efekti */
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-/* Hizmet Kutuları */
-.service-box {
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #88cffa;
-    transition: transform 0.3s ease;
-    background: linear-gradient(145deg, #e0f7ff, #cceeff);
-    color: #055;
-}
-
-.service-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(136, 207, 250, 0.8);
-}
-
-.luxury-section {
+    justify-content: center;
     text-align: center;
-    padding: 50px 0;
-    color: #055;
-}
-
-.luxury-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.luxury-card {
+  }
+  .hero-title {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  .hero-btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+  }
+  
+  /* Hakkımızda Bölümü */
+  .about-section {
+    background: #fff;
+  }
+  .about-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Hizmetler Bölümü */
+  .services-section {
+    background: #f8f9fa;
+  }
+  .services-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* İletişim Bölümü */
+  .contact-section {
+    background: #fff;
+  }
+  .contact-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  #contactForm .form-control {
+    border-radius: 4px;
+  }
+  #contactForm button {
     width: 150px;
-    height: 150px;
-    background: linear-gradient(145deg, #e0f7ff, #cceeff);
-    border: 2px solid #88cffa;
-    color: #055;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.luxury-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(136, 207, 250, 0.8);
-}
-
-/* NAVBAR */
-.navbar {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+  }
+  
+  /* Footer */
+  .footer-section {
+    background: #343a40;
+  }
+  .footer-section p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
