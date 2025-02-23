@@ -117,3 +117,46 @@ body {
     margin: 0;
     font-size: 0.9rem;
   }
+  .service-card h5 {
+  font-size: 18px; /* Yazı boyutunu tutarlı hale getirir */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px; /* Yazı boyutunu tutarlı hale getirir */
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Kutu yüksekliğini tamamen doldurur */
+  padding: 20px;
+}
+
+.service-card .service-icon {
+  margin-bottom: 20px; /* İkon ile başlık arasında boşluk bırakır */
+  max-width: 60px; /* İkonun boyutunu sınırlayabiliriz */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-card h5, .service-card p {
+  margin: 0; /* İçerikte fazladan boşluk bırakmamak için */
+}
+
+.col-md-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex: 1 1 23%; /* Yüksekliği eşitlemek için kutular arasında boşluk bırakır */
+  margin: 10px 0; /* Kutu arasında biraz boşluk bırakmak için */
+}
