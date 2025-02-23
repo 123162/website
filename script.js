@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-  
+    
     // İletişim formu gönderim işlemi
-    document.querySelector("#contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Mesajınız gönderildi, en kısa sürede dönüş sağlanacaktır.");
-      this.reset();
-    });
-  });
+  //   document.querySelector("#contactForm").addEventListener("submit", function (e) {
+  //     e.preventDefault();
+  //     alert("Mesajınız gönderildi, en kısa sürede dönüş sağlanacaktır.");
+  //     this.reset();
+  //   });
+   });
